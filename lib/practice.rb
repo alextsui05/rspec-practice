@@ -6,7 +6,9 @@ class Practice
   #   F(n) = F(n - 1) + F(n - 2), for n > 1.
   #
   def fib(n)
-    # return n if n <= 1
-    # fib(n - 1) + fib(n - 2)
+    return n if n <= 1
+    fib_arr = [0, 1, 1]
+    (n - 2).times { fib_arr << (fib_arr[-1] + fib_arr[-2]) }
+    fib_arr[n]
   end
 end
