@@ -1,5 +1,7 @@
 # rspec-practice
 
+![rspec](https://github.com/alextsui05/rspec-practice/actions/workflows/rspec.yml/badge.svg)
+
 This is a project that show how to use rspec.
 
 - There is code in `lib/practice.rb` for calculating the Fibonacci numbers
