@@ -7,8 +7,13 @@ class Practice
   #
   def fib(n)
     return n if n <= 1
-    fib_arr = [0, 1, 1]
-    (n - 2).times { fib_arr << (fib_arr[-1] + fib_arr[-2]) }
-    fib_arr[n]
+    # 0 and 1 are the base cases - everything else is a sum
+    fib_arr = [0, 1]
+    (n - 1).times do
+      fib_arr << (fib_arr[-1] + fib_arr[-2])
+      # By removing the unneeded number from the array, it uses a constant amount of memory
+      fib_arr.shift
+    end
+    fib_arr[-1]
   end
 end
